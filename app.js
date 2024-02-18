@@ -30,9 +30,9 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
-
+app.use(express.static(path.join(__dirname,"/views")));
 app.get("/",(req,res)=>{
-    res.send("Hi I am root");
+    res.render('Home/index');
 });
 
 const validateListing =(req,res,next)=>{
