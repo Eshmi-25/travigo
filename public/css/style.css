@@ -1,8 +1,14 @@
 body{
     font-family: 'Plus Jakarta Sans', sans-serif !important;
+    background: linear-gradient(to right, #ffff00, #ff0000);
+    color: #200101;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+h1,h2,h3 {
+    color: #200101;
 }
 
 .container{
@@ -15,7 +21,7 @@ body{
         background-color: white;
 }
 .fa-compass{
-    color: #fe424d;
+    color: #200101;
     font-size: 2rem;
 }
 .nav-link{
@@ -90,12 +96,12 @@ body{
 
 /* Button */
 .add-btn{
-    background-color: #fe424d !important;
+    background-color: #860609 !important;
     border: none !important;
 }
 
 .edit-btn{
-    background-color: #fe424d !important;
+    background-color: #860609 !important;
     border: none !important;
 }
 .btns{
