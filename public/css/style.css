@@ -1,6 +1,5 @@
 body{
     font-family: 'Plus Jakarta Sans', sans-serif !important;
-    background: linear-gradient(to right, #ffff00, #ff0000);
     color: #200101;
     display: flex;
     flex-direction: column;
@@ -21,7 +20,7 @@ h1,h2,h3 {
         background-color: white;
 }
 .fa-compass{
-    color: #200101;
+    color: #860609;
     font-size: 2rem;
 }
 .nav-link{
