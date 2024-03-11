@@ -2,7 +2,7 @@ const express= require("express");
 const app= express();
 const mongoose = require("mongoose");
 const Listing=require("./models/listing.js");
-const path = require("path");
+var path = require("path");
 const methodOverride = require("method-override");
 const ejsMate= require("ejs-mate");
 const wrapAsync= require("./utils/wrapAsync.js");
@@ -109,6 +109,10 @@ app.delete("/listings/:id", wrapAsync(async(req,res)=>{
     res.send("Successful Testing");
 })*/
 
+app.get("/solotrip", (req,res)=>{
+    res.render("solotrip/solotrip.ejs");
+}); 
+
 app.all("*",(req,res,next)=>{
     next(new ExpressError(404,"Page Not Found"));
 });
@@ -119,6 +123,7 @@ app.use((err,req,res,next)=>{
     // res.status(statusCode).send(message);
     
 })
+
 
 app.listen(8080, ()=>{
     console.log("Server is listening to port 8080");

@@ -16,9 +16,12 @@ h1,h2,h3 {
 
 /* Navbar */
 .navbar{
-        height: 5rem;
-        background-color: white;
-}
+        position:relative;
+        top: 0;
+        width: 100%;
+       
+    }
+    
 .fa-compass{
     color: #860609;
     font-size: 2rem;
