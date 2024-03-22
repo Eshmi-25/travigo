@@ -113,6 +113,10 @@ app.get("/solotrip", (req,res)=>{
     res.render("solotrip/solotrip.ejs");
 }); 
 
+app.get("/attractions",(req,res)=>{
+    res.render("Tourist_Attractions/ta.ejs")
+})
+
 app.all("*",(req,res,next)=>{
     next(new ExpressError(404,"Page Not Found"));
 });
