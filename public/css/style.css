@@ -66,7 +66,7 @@ h1,h2,h3 {
 
 /* Cards */
 
-.card{
+.listing-card{
     border: none !important;
     margin-bottom: 2rem; 
 }
@@ -119,4 +119,12 @@ h1,h2,h3 {
 .show-card{
     padding-left: 0;
     padding-right: 0;
+}
+
+
+/* Map */
+
+#map { 
+    height: 400px;
+    width: 100vh; 
 }
