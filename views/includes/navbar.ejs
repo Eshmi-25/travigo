@@ -27,12 +27,10 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
-          <!-- <a class="nav-link "  href="/">Home</a> -->
-          <!-- <a class="nav-link" href="/listings">All Listings</a> -->
+          <a class="nav-link "  href="/">Home</a>
           <a class="nav-link" href="/listings">Explore</a>
-          <!-- <a class="nav-link" href="/scenic">Scenic Beauty</a> -->
-          <!-- <a class="nav-link" href="/attractions">Tourist Attractions</a> -->
-          <!-- <a class="nav-link" href="/trips">Solo Trips</a> -->
+          <a class="nav-link" href="/attractions">Tourist Attractions</a>
+          <a class="nav-link" href="/solotrip">Solo Trips</a>
         </div>
         <div class="navbar-nav ms-auto">
           <form class="d-flex" role="search">
@@ -40,16 +38,16 @@
             <button class="btn btn-search" type="submit"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
           </form>
         </div>
-        <div class="navbar-nav ms-auto">
-          <a class="nav-link" href="/listings/new">Travigo your Place</a>
-          <% if(!curUser) { %>
-          <a class="nav-link "  href="/signup"><b>Sign up</b></a>
-          <a class="nav-link" href="/login"><b>Log in</b></a>
-          <% } %>
-          <% if(curUser) { %>
-          <a class="nav-link" href="/logout"><b>Log out</b></a>
-          <% } %>
-        </div>
+          <div class="navbar-nav ms-auto">
+              <a class="nav-link" href="/listings/new">Travigo your Place</a>
+              <% if (!curUser) { %>
+                  <a class="nav-link" href="/signup"><b>Sign up</b></a>
+                  <a class="nav-link" href="/login"><b>Log in</b></a>
+              <% } %>
+              <% if (curUser) { %>
+                  <a class="nav-link" href="/logout">Log out</a>
+              <% } %>
+          </div>
       </div>
     </div>
   </nav>

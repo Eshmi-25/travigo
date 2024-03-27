@@ -1,91 +1,116 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
 .container {
     background: linear-gradient(to right, #ffff00, #ff0000);
     color: #200101;
-    font-family: 'Plus Jakarta Sans', sans-serif;
     padding: 20px;
+    border-radius: 10px;
 }
+
 h1 {
-    color: #200101;
-    margin-top: 0;
     font-size: 32px;
+    margin-top: 0;
 }
+
 h2 {
+    font-size: 24px;
     margin-top: 30px;
 }
+
 p {
     font-size: 16px;
+    line-height: 1.6;
 }
-.button {
+
+/* Button Styles */
+.but {
     display: inline-block;
     background-color: #860609;
     color: white;
     border: none;
     padding: 10px 20px;
     text-decoration: none;
-    margin-top: 50px;
-    margin-left: 2%;
+    margin-top: 20px;
+    margin-left: 10px;
     font-size: 1.2em;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
-.travel {
-    margin-left: 45%; 
-    margin-top: -10%;
-
-    /* Tablet-sized screens (768px and above) */
-    @media screen and (max-width: 768px) {
-        margin-left: 5px; 
-        margin-top: 5px; 
-}
+.but:hover {
+    background-color: #6e0609;
 }
 
-.plane{
-    margin-right: 50%; 
-    margin-top: -38%;
-    
-
-    @media screen and (max-width: 768px) {
-        display: none;
-    }
-}
-
-.container2 {
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 20px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
+/* Image Styles */
+.images-wrapper {
     text-align: center;
 }
 
-.features-heading {
-    margin-bottom: 20px; 
+.travel {
+    float: right;
+    margin-right: 10px; /* Adjust spacing between the images and links */
 }
 
+.plane {
+    float: left;
+    margin-left: 10px; /* Adjust spacing between the images and links */
+}
+
+/* Feature Box Styles */
 .feature {
-    margin-bottom: 20px; 
-    width: 48%; 
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.features-heading {
+    margin-bottom: 20px;
 }
 
 .feature h2 {
     margin-top: 0;
 }
 
-.no-bullets {
-    list-style-type: none;
+/* Review Styles */
+.review {
+    margin-top: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
 }
 
+.review-info {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.review-text p {
+    margin: 0;
+    line-height: 1.5;
+}
 
 .stars {
-    color: #200101; 
-    font-size: 20px; 
-   
+    color: gold;
+    font-size: 20px;
+    margin-top: 10px;
 }
 
-.review p {
-    text-align: center; /* Align text at the center */
+.stars::after {
+    content: "Verified Purchase";
+    display: block;
+    font-size: 12px;
+    color: #888;
 }

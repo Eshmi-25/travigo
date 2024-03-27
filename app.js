@@ -42,6 +42,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(methodOverride("_method"));
 app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname,"/public")));
+app.use(express.static(path.join(__dirname,"/views")));
 
 const store = MongoStore.create({
     mongoUrl: dbUrl,
@@ -67,11 +68,6 @@ const sessionOptions ={
     },
 };
 
-// app.get("/",(req,res)=>{
-//     res.send("Hi I am root");
-// });
-
-
 
 app.use(session(sessionOptions));
 app.use(flash());
@@ -86,6 +82,7 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req,res,next)=>{
     res.locals.success=req.flash("success");
     res.locals.error=req.flash("error");
+    // res.locals.isHome = (req.url === '/');
     res.locals.curUser = req.user;
     next();
 })
@@ -99,9 +96,23 @@ app.use((req,res,next)=>{
 //     res.send(registeredUser);
 // })
 
+//Home
+app.get("/",(req,res)=>{
+    res.render('Home/home');
+});
+
+
 app.use("/listings",listingsRouter);
 app.use("/listings/:id/reviews", reviewsRouter);
 app.use("/",userRouter);
+
+app.get("/solotrip", (req,res)=>{
+    res.render("solotrip/solotrip.ejs");
+}); 
+
+app.get("/attractions",(req,res)=>{
+    res.render("Tourist_Attractions/ta.ejs")
+});
 
 //Not found pages
 app.all("*",(req,res,next)=>{
